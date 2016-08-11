@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		197CD20D1D5BEDCA00C8FC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD20C1D5BEDCA00C8FC7F /* AppDelegate.swift */; };
 		197CD20F1D5BEDCA00C8FC7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD20E1D5BEDCA00C8FC7F /* ViewController.swift */; };
-		197CD2121D5BEDCA00C8FC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CD2101D5BEDCA00C8FC7F /* Main.storyboard */; };
 		197CD2141D5BEDCA00C8FC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197CD2131D5BEDCA00C8FC7F /* Assets.xcassets */; };
 		197CD2171D5BEDCA00C8FC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CD2151D5BEDCA00C8FC7F /* LaunchScreen.storyboard */; };
+		197CD21F1D5BFD7000C8FC7F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD21E1D5BFD7000C8FC7F /* AddItemViewController.swift */; };
+		197CD2211D5BFFEB00C8FC7F /* AddingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD2201D5BFFEB00C8FC7F /* AddingItems.swift */; };
+		197CD2231D5C1F4300C8FC7F /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */; };
+		197CD2261D5C290B00C8FC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CD2241D5C290B00C8FC7F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		197CD2091D5BEDCA00C8FC7F /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		197CD20C1D5BEDCA00C8FC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		197CD20E1D5BEDCA00C8FC7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		197CD2111D5BEDCA00C8FC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		197CD2131D5BEDCA00C8FC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		197CD2161D5BEDCA00C8FC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		197CD2181D5BEDCA00C8FC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		197CD21E1D5BFD7000C8FC7F /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		197CD2201D5BFFEB00C8FC7F /* AddingItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingItems.swift; sourceTree = "<group>"; };
+		197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		197CD2251D5C290B00C8FC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 			children = (
 				197CD20C1D5BEDCA00C8FC7F /* AppDelegate.swift */,
 				197CD20E1D5BEDCA00C8FC7F /* ViewController.swift */,
-				197CD2101D5BEDCA00C8FC7F /* Main.storyboard */,
 				197CD2131D5BEDCA00C8FC7F /* Assets.xcassets */,
 				197CD2151D5BEDCA00C8FC7F /* LaunchScreen.storyboard */,
+				197CD2241D5C290B00C8FC7F /* Main.storyboard */,
 				197CD2181D5BEDCA00C8FC7F /* Info.plist */,
+				197CD21E1D5BFD7000C8FC7F /* AddItemViewController.swift */,
+				197CD2201D5BFFEB00C8FC7F /* AddingItems.swift */,
+				197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -122,9 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197CD2261D5C290B00C8FC7F /* Main.storyboard in Resources */,
 				197CD2171D5BEDCA00C8FC7F /* LaunchScreen.storyboard in Resources */,
 				197CD2141D5BEDCA00C8FC7F /* Assets.xcassets in Resources */,
-				197CD2121D5BEDCA00C8FC7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,28 +144,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197CD2231D5C1F4300C8FC7F /* GroceryListViewController.swift in Sources */,
 				197CD20F1D5BEDCA00C8FC7F /* ViewController.swift in Sources */,
+				197CD2211D5BFFEB00C8FC7F /* AddingItems.swift in Sources */,
 				197CD20D1D5BEDCA00C8FC7F /* AppDelegate.swift in Sources */,
+				197CD21F1D5BFD7000C8FC7F /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		197CD2101D5BEDCA00C8FC7F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				197CD2111D5BEDCA00C8FC7F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		197CD2151D5BEDCA00C8FC7F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				197CD2161D5BEDCA00C8FC7F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		197CD2241D5C290B00C8FC7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				197CD2251D5C290B00C8FC7F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
