@@ -10,6 +10,8 @@ import Foundation
 
 var shoppingList = ShoppingList()
 
+var listOfShoppingLists = ListOfShoppingLists()
+
 struct ShoppingItem {
     let itemName: String
     let quantity: String
@@ -18,9 +20,21 @@ struct ShoppingItem {
 class ShoppingList {
     
     var items = [ShoppingItem]()
+    var name = "Shopping List \(listOfShoppingLists.listOfLists.count)"
+    var time = String()
     
     func addItem(itemName: String, quantity: String) {
         items.append(ShoppingItem(itemName: itemName, quantity: quantity))
+    }
+    
+}
+
+class ListOfShoppingLists {
+    
+    var listOfLists = [ShoppingList]()
+    
+    func addShoppingList(shoppingList: ShoppingList) {
+        listOfLists.append(shoppingList)
     }
     
 }

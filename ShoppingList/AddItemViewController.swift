@@ -23,7 +23,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddItemViewController.tap(_:)))
         view.addGestureRecognizer(tapGesture)
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,8 +51,8 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
             itemName.text = ""
             quantity.text = ""
             self.tabBarController?.selectedIndex = 1
-            
         }
+
     }
     
     func tap(gesture: UITapGestureRecognizer) {
@@ -60,6 +60,17 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         quantity.resignFirstResponder()
     }
     
+    //Change back to main view controller
+    @IBAction func backToHomeButton(sender: UIBarButtonItem) {
+        let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main")
+        
+        self.presentViewController(mainViewController!, animated: true, completion: nil)
+    }
+    
+    //Change to Grocery List ViewController
+    @IBAction func viewListButton(sender: UIBarButtonItem) {
+        self.tabBarController?.selectedIndex = 1
+    }
 
     /*
     // MARK: - Navigation
@@ -72,3 +83,4 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     */
 
 }
+

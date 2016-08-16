@@ -38,11 +38,11 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     //UITableViewDataSource
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingList.items.count
     }
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default")
         cell.textLabel?.text = shoppingList.items[indexPath.row].itemName
@@ -50,6 +50,44 @@ class GroceryListViewController: UIViewController, UITableViewDelegate, UITableV
         
         
         return cell
+        
+    }
+    
+    //Switch to AddItems view controller
+    @IBAction func addItemSwitchTabButton(sender: UIBarButtonItem) {
+        self.tabBarController?.selectedIndex = 0
+    }
+    
+    //Add list to list of lists array, set shopping list back to empty array, navigate back to main screen
+    @IBAction func saveList(sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: "Give it a name!", message: "Would you like to give your shopping list a name?", preferredStyle: .Alert)
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.text! = "Shopping List \(listOfShoppingLists.listOfLists.count + 1)"
+        }
+        alertController.addAction(UIAlertAction(title: "Done", style: .Default, handler: { (action) in
+            let textField = alertController.textFields![0] as UITextField
+            print(textField.text!)
+            
+            listOfShoppingLists.addShoppingList(shoppingList)
+            listOfShoppingLists.listOfLists.last?.name = textField.text!
+            
+            let date = NSDate()
+            let calender = NSCalendar.currentCalendar()
+            let year = calender.component(.NSYearCalendarUnit, fromDate: date)
+            let month = calender.component(.NSMonthCalendarUnit, fromDate: date)
+            let day = calender.component(.NSDayCalendarUnit, fromDate: date)
+            listOfShoppingLists.listOfLists.last?.time = "\(month)/\(day)/\(year)"
+            
+            shoppingList.items = []
+            
+            let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main")
+            
+            self.presentViewController(mainViewController!, animated: true, completion: nil)
+
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
         
     }
 
