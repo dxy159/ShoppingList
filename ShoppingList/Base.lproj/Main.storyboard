@@ -266,7 +266,7 @@
         <!--Your Saved Lists-->
         <scene sceneID="7NB-Ua-2xU">
             <objects>
-                <viewController id="DAc-2C-5fl" customClass="ListOfShoppingListsViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Presented List" id="DAc-2C-5fl" customClass="ListOfShoppingListsViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gcg-DF-paJ"/>
                         <viewControllerLayoutGuide type="bottom" id="cZm-DC-b9a"/>
@@ -296,11 +296,44 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="lists" destination="QEa-B3-VaA" id="AzN-tW-8Xd"/>
+                        <segue destination="zdY-l0-EB6" kind="show" identifier="showGroceries" id="SXw-Ap-1BM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiG-V4-vbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1164" y="1161"/>
+        </scene>
+        <!--Present List Items View Controller-->
+        <scene sceneID="hf6-ic-tgT">
+            <objects>
+                <viewController id="zdY-l0-EB6" customClass="PresentListItemsViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7kc-pL-lGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="XYF-dl-P4s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7kA-YA-IY8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffi-vP-f1G">
+                                <rect key="frame" x="0.0" y="28" width="320" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zdY-l0-EB6" id="twM-AV-6cK"/>
+                                    <outlet property="delegate" destination="zdY-l0-EB6" id="4bj-sY-68g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="items" destination="ffi-vP-f1G" id="poZ-NO-eQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdH-hW-5tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="1161"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="nY9-az-ncO">

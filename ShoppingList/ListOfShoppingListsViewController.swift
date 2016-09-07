@@ -11,7 +11,6 @@ import UIKit
 class ListOfShoppingListsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var lists: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +50,21 @@ class ListOfShoppingListsViewController: UIViewController, UITableViewDataSource
         return cell
     }
     
+    var valueToPass: String!
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        // Get Cell Label
+        let indexPath = lists.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!
+        
+        valueToPass = currentCell.textLabel!.text
+        print(valueToPass)
+        performSegueWithIdentifier("showGroceries", sender: self)
+        
+    }
+    
     @IBAction func backButton(sender: UIBarButtonItem) {
         
         let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Main")
@@ -59,14 +73,24 @@ class ListOfShoppingListsViewController: UIViewController, UITableViewDataSource
 
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let cell = sender as? UITableViewCell {
+            let i = lists.indexPathForCell(cell)!.row
+            
+            if segue.identifier == "showGroceries" {
+                let presentListItemViewController = segue.destinationViewController as! PresentListItemsViewController
+                presentListItemViewController.indexOfCell = i
+            }
+        }
+        
     }
-    */
 
 }
+
+
+
+
+
+
+

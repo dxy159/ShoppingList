@@ -16,6 +16,7 @@
 		197CD2231D5C1F4300C8FC7F /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */; };
 		197CD2261D5C290B00C8FC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197CD2241D5C290B00C8FC7F /* Main.storyboard */; };
 		197CD22C1D62721100C8FC7F /* ListOfShoppingListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD22B1D62721100C8FC7F /* ListOfShoppingListsViewController.swift */; };
+		197CD22E1D637EE300C8FC7F /* PresentListItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CD22D1D637EE300C8FC7F /* PresentListItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
 		197CD2251D5C290B00C8FC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		197CD22B1D62721100C8FC7F /* ListOfShoppingListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfShoppingListsViewController.swift; sourceTree = "<group>"; };
+		197CD22D1D637EE300C8FC7F /* PresentListItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentListItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				197CD2221D5C1F4300C8FC7F /* GroceryListViewController.swift */,
 				197CD2201D5BFFEB00C8FC7F /* AddingItems.swift */,
 				197CD22B1D62721100C8FC7F /* ListOfShoppingListsViewController.swift */,
+				197CD22D1D637EE300C8FC7F /* PresentListItemsViewController.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197CD22E1D637EE300C8FC7F /* PresentListItemsViewController.swift in Sources */,
 				197CD2231D5C1F4300C8FC7F /* GroceryListViewController.swift in Sources */,
 				197CD22C1D62721100C8FC7F /* ListOfShoppingListsViewController.swift in Sources */,
 				197CD20F1D5BEDCA00C8FC7F /* ViewController.swift in Sources */,
